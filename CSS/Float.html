@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Float and Clear</title>
+
+    <style>
+        
+
+        .cards {
+            border: 2px solid black;
+            display: flow-root;
+        }
+
+        img {
+            float: left;
+        }
+
+        
+
+        .card {
+            border: 2px solid black;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+
+        <img width="200px" src="card.jpg" alt="">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur voluptas at
+            voluptatum amet veritatis necessitatibus odit blanditiis aspernatur temporibus!
+        </div>
+        <div class="card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, voluptatibus. Voluptatum
+            accusamus odio nemo debitis consectetur dolorum culpa, aperiam, quos neque quae corrupti aut voluptas ex
+            aspernatur numquam nihil officiis nisi reprehenderit minus. Quia aut, officiis autem error animi ipsum
+            labore consequuntur quo et illum?
+        </div>
+       
+
+    </div>
+</body>
+
+</html>

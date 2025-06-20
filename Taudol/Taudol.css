@@ -1,0 +1,439 @@
+ :root {
+   --primary-color: #006699;
+   --secondary-color: #007c91;
+   --light-bg: #f5f5f5;
+   --section-bg: #f8f9fa;
+   --card-bg: #fff;
+   --accent-color: #e67e22;
+ }
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   font-family: 'Open Sans', sans-serif;
+   background-color: var(--light-bg);
+   line-height: 1.6;
+   color: #333;
+ }
+
+ h1, h2, h3 {
+ font-family: 'Cinzel', serif;
+ 
+}
+ body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+.dark .service-card,
+.dark .member-card {
+  background-color: #1e1e1e;
+}
+#darkModeToggle {
+  transition: transform 0.3s ease;
+}
+#darkModeToggle:hover {
+  transform: rotate(20deg) scale(1.2);
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: var(--light-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#preloader::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body.dark {
+  --light-bg: #121212;
+  --card-bg: #1e1e1e;
+  --section-bg: #1a1a1a;
+  --primary-color: #90caf9;
+  --secondary-color: #64b5f6;
+  --accent-color: #f9a825;
+  color: #eee;
+  background-color: var(--light-bg);
+}
+
+
+ header {
+   background-color: rgba(0, 102, 153, 0.9);
+   padding: 1rem 0;
+   position: sticky;
+   top: 0;
+   z-index: 999;
+   backdrop-filter: blur(10px);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ }
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+}
+ nav ul {
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+   list-style: none;
+ }
+
+ nav a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 600;
+   padding-bottom: 4px;
+   position: relative;
+   transition: color 0.3s ease;
+ }
+
+ nav a::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0%;
+   height: 2px;
+   background: var(--accent-color);
+   transition: 0.3s ease;
+ }
+
+ nav a:hover::after {
+   width: 100%;
+ }
+
+ nav a:hover {
+   color: var(--accent-color);
+ }
+
+
+
+ #hero {
+   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+     url('taudo.png') center/cover no-repeat;
+   height: 70vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   color: #fff;
+   background-attachment: fixed;
+   text-align: center;
+   padding: 0 1.5rem;
+   overflow: hidden;
+ }
+
+ .hero-overlay {
+   background: rgba(0, 0, 0, 0.65);
+   padding: 2.5rem 3rem;
+   border-radius: 20px;
+   backdrop-filter: blur(10px);
+   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+   max-width: 800px;
+   width: 100%;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .hero-overlay h1 {
+   font-size: 3.5rem;
+   font-weight: 800;
+   margin-bottom: 1rem;
+   color: #fff;
+   line-height: 1.2;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide-text 4s linear infinite;
+}
+
+/* Add to your Taudol.css */
+.hero-overlay h1,
+.hero-overlay p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-overlay h1 {
+  animation-delay: 0s;
+}
+
+.hero-overlay p {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ /* Mobile & tablet responsiveness */
+ @media (max-width: 768px) {
+   #hero {
+     height: 60vh;
+   }
+
+   .hero-overlay {
+     padding: 2rem 1.5rem;
+     border-radius: 16px;
+   }
+
+   .hero-overlay h1 {
+     font-size: 2.2rem;
+   }
+ }
+
+ @media (max-width: 480px) {
+   #hero {
+     height: 50vh;
+   }
+
+   .hero-overlay {
+     padding: 1.5rem 1rem;
+     border-radius: 12px;
+   }
+
+   .hero-overlay h1 {
+     font-size: 1.7rem;
+   }
+ }
+
+
+ section {
+   padding: 3rem 1.5rem;
+ }
+
+ .about-section,
+ .services-section,
+ .contact-section {
+   background-color: var(--section-bg);
+ }
+
+ .about-container,
+ .contact-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   max-width: 1100px;
+   margin: auto;
+ }
+
+ .about-img {
+   max-width: 450px;
+   border-radius: 12px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ .about-text h2,
+ .services-section h2,
+ .contact-section h2,
+ #members h2 {
+   color: var(--primary-color);
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 2.2rem;
+ }
+
+ .services-container,
+ .member-list {
+   display: flex;
+   gap: 2rem;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+
+ .service-card,
+ .member-card {
+   background: var(--card-bg);
+   padding: 1.5rem;
+   border-radius: 12px;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+   max-width: 320px;
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .service-card:hover,
+ .member-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ }
+
+ .service-card img,
+ .member-card img {
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 1rem;
+   border: 2px solid var(--primary-color);
+ }
+
+ .contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   width: 100%;
+ }
+
+ .contact-form input,
+ .contact-form textarea {
+   padding: 1rem;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+ }
+
+ .contact-form button {
+   background: var(--secondary-color);
+   box-shadow: 0 0 8px var(--accent-color);
+   transition: 0.3s ease;
+ }
+
+ .contact-form button:hover {
+   background-color: var(--accent-color);
+   box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--accent-color);
+   transform: scale(1.05);
+ }
+
+ .member-controls {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin-bottom: 2rem;
+ }
+
+ .member-controls input,
+ .member-controls select {
+   padding: 0.75rem;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   min-width: 220px;
+ }
+
+ .social-icons a {
+   margin: 0 0.5rem;
+   color: white;
+   font-size: 1.5rem;
+   transition: 0.3s ease;
+ }
+
+ .social-icons a:hover {
+   color: var(--accent-color);
+   transform: scale(1.3);
+ }
+
+ #typed-text {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: "Courier New", Courier, monospace; /* Typewriter-style font */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: fit-content;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Optional: blinking caret effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+
+/* Gallery Section */
+#gallery {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image Styling */
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+ footer {
+   text-align: center;
+   background: #333;
+   color: white;
+   padding: 1rem;
+ }
+
+ button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #0056b3;
+}
+
+ html {
+   scroll-behavior: smooth;
+ }

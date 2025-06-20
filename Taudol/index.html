@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taudol Pariwar Samaj</title>
+  <link rel="stylesheet" href="Taudol.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+              <button id="darkModeToggle">🌙</button>
+
+      </ul>
+
+      <!-- Add this toggle in your nav or header -->
+    </nav>
+
+  </header>
+  <div id="preloader"></div>
+  <section id="hero">
+    <div class="hero-overlay">
+      <h1>Welcome to Taudol Pariwar Samaj</h1>
+      <p>Bringing our community closer together.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about-section" data-aos="fade-right">
+    <div class="about-container">
+      <img src="group.png" alt="Taudol Village" class="about-img" />
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Taudol Pariwar Samaj is a community organization formed by the residents of Taudol village to promote unity,
+          preserve cultural heritage, and support one another. Our society has a long-standing history of cooperation,
+          celebrating traditions, and building a strong network of families both within and outside the village.
+        </p>
+        <p>
+          We aim to organize events, assist our members, and maintain a platform where all members can stay connected
+          and updated about important happenings.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services" class="services-section" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <img src="meeting.png" alt="Community Meetings" />
+        <h3>Community Meetings</h3>
+        <p>Regular gatherings to discuss ideas, address issues, and plan community development initiatives.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="festival.png" alt="Festivals and Events" />
+        <h3>Festivals & Events</h3>
+        <p>Celebrating our culture through annual festivals, rituals, and cultural shows that unite all members.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="support.png" alt="Support Programs" />
+        <h3>Member Support</h3>
+        <p>Programs to assist members in times of need — including health, education, and emergency aid.</p>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" data-aos="zoom-in">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="jatra.png" alt="Balaju Jatra" />
+      <img src="jatra2.png" alt="Event 2" />
+      <img src="event.png" alt="Event 2" />
+      <img src="event2.png" alt="Event 2" />
+      <img src="event3.png" alt="Event 2" />
+
+      <!-- Add more -->
+    </div>
+  </section>
+
+
+  <section id="contact" class="contact-section" data-aos="fade-left">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i><strong>Email:</strong> <a
+            href="mailto:info@taudolpariwar.org">taudolpariwarsamaj@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i><strong>Phone:</strong> +977-98XXXXXXXX</p>
+        <p><strong>Address:</strong> Taudol,Balaju-16,Kathmandu, Nepal</p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <section id="members">
+    <h2>Member Directory</h2>
+
+    <!-- 🔍 Search and Role Filter -->
+    <div class="member-controls">
+      <input type="text" id="searchInput" placeholder="Search by name or location..." />
+      <select id="roleFilter">
+        <option value="">All Roles</option>
+        <option value="President">President</option>
+        <option value="Vice President">Vice President</option>
+        <option value="Secretary">Secretary</option>
+        <option value="Treasurer">Treasurer</option>
+        <option value="Member">Member</option>
+      </select>
+    </div>
+
+    <!-- 👤 Static Member Cards -->
+    <div class="member-list">
+      <div class="member-card" data-name="Roshan Balami" data-location="Kathmandu" data-role="President">
+        <img src="roshan.png" alt="Roshan Balami" />
+        <h3>Ramesh Balami</h3>
+        <p><strong>Role:</strong> President</p>
+        <p><strong>Location:</strong> Kathmandu</p>
+      </div>
+
+      <div class="member-card" data-name="Sudip Balami" data-location="Kathmandu" data-role="Member">
+        <img src="sudip.png" alt="Sudip Balami" />
+        <h3>Sudip Balami</h3>
+        <p><strong>Role:</strong> Vice President</p>
+        <p><strong>Location:</strong> Kathmandu</p>
+      </div>
+
+      <div class="member-card" data-name="Raj Balami" data-location="Kathmandu" data-role="Secretary">
+        <img src="raj.png" alt="Raj Balami" />
+        <h3>Raj Balami</h3>
+        <p><strong>Role:</strong> Secretary</p>
+        <p><strong>Location:</strong> Kathmandu</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="news" data-aos="fade-up">
+  <h2>Latest Announcements</h2>
+  <div class="news-item">📢 Annual General Meeting on July 20, 2025</div>
+  <div class="news-item">🎉 Dashain Celebration</div>
+</section>
+
+  <button id="scrollToTop"><i class="fas fa-arrow-up"></i></button>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/taudo.pariwar.samaj"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Taudol Pariwar Samaj. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("preloader").style.display = "none";
+    });
+  </script>
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const roleFilter = document.getElementById("roleFilter");
+    const memberCards = document.querySelectorAll(".member-card");
+
+    function filterMembers() {
+      const searchText = searchInput.value.toLowerCase();
+      const selectedRole = roleFilter.value;
+
+      memberCards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        const location = card.dataset.location.toLowerCase();
+        const role = card.dataset.role;
+
+        const matchesSearch = name.includes(searchText) || location.includes(searchText);
+        const matchesRole = selectedRole === "" || role === selectedRole;
+
+        card.style.display = (matchesSearch && matchesRole) ? "block" : "none";
+      });
+    }
+
+    searchInput.addEventListener("input", filterMembers);
+    roleFilter.addEventListener("change", filterMembers);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script>
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
+
+
+  <script>
+    const btn = document.getElementById("scrollToTop");
+    window.addEventListener("scroll", () => {
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
+</body>
+
+</html>
